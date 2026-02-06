@@ -2,41 +2,24 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>SBS게임아카데미학원</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게임개발 커리큘럼</title>
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #020617;
-      color: #ffffff;
+      background-color: #000;
+      overflow-x: hidden;
     }
 
-    /* ===== 풀화면 영상 ===== */
-    .hero-video {
-      width: 100vw;
-      height: 100vh;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* 안 잘리게 */
-      background: #000;
-    }
-
-    /* ===== 풀폭 배너 ===== */
+    /* 배너 */
     .banner {
-      width: 100vw;
+      width: 100%;
     }
 
     .banner img {
@@ -45,92 +28,40 @@
       display: block;
     }
 
-    /* ===== 텍스트 영역 ===== */
-    .container {
-      max-width: 520px;
+    /* 영상 영역 */
+    .video-wrap {
+      width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
-      text-align: center;
-      padding: 80px 20px;
+      padding: 40px 0;
     }
 
-    .badge {
-      display: inline-block;
-      font-size: 13px;
-      letter-spacing: 0.05em;
-      background: rgba(255,255,255,0.1);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 18px;
-      line-height: 1.4;
-    }
-
-    p {
-      font-size: 16px;
-      opacity: 0.85;
-      margin-bottom: 44px;
-      line-height: 1.7;
-    }
-
-    a.button {
-      display: inline-block;
-      background: #22c55e;
-      color: #052e16;
-      padding: 18px 32px;
-      border-radius: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 13px;
-      opacity: 0.5;
+    .video-wrap video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background-color: #000;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 🎮 게임개발 커리큘럼 영상 -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline>
-      <source src="curri_main_thum_dev.mp4" type="video/mp4">
-      브라우저가 영상을 지원하지 않습니다.
+  <!-- 학원 신년 맞이 배너 -->
+  <div class="banner">
+    <img src="KakaoTalk_20260206_095855285.jpg" alt="학원 신년 맞이 배너">
+  </div>
+
+  <!-- 게임개발 커리큘럼 영상 -->
+  <div class="video-wrap">
+    <video 
+      src="curri_main_thum_dev.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      controls>
     </video>
-  </section>
-
-  <!-- 🎉 학원 신년 맞이 배너 -->
-  <section class="banner">
-    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
-  </section>
-
-  <!-- 📄 텍스트 / 상담 -->
-  <div class="container">
-    <div class="badge">SBS게임아카데미학원</div>
-
-    <h1>
-      게임 · 웹툰 · 웹소설<br>
-      실무 중심 멘토링
-    </h1>
-
-    <p>
-      취업, 데뷔, 1인 개발을 목표로 하는 분들을 위한<br>
-      현업 실무자 기반 맞춤 교육 과정
-    </p>
-
-    <a class="button" href="https://open.kakao.com/o/sTHwo0ei">
-      지금 상담 신청하기
-    </a>
-
-    <div class="footer">
-      © SBS게임아카데미학원
-    </div>
   </div>
 
 </body>
