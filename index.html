@@ -4,48 +4,49 @@
   <meta charset="UTF-8">
   <title>SBS게임아카데미학원</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #0f172a, #020617);
+      background: #020617;
       color: #ffffff;
-      text-align: center;
     }
 
-    .wide {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 20px 0;
-    }
-
-    .banner {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    }
-
-    .video {
-      width: 100%;
-      max-width: 900px;
-      margin: 60px auto 0;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    }
-
-    video {
-      width: 100%;
-      display: block;
+    /* ===== 공통 ===== */
+    .section-full {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
     }
 
     .container {
       max-width: 520px;
-      margin: 60px auto 0;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
     }
 
+    /* ===== 영상 ===== */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== 배너 ===== */
+    .banner {
+      width: 100%;
+      display: block;
+    }
+
+    /* ===== 텍스트 ===== */
     .badge {
       display: inline-block;
       font-size: 13px;
@@ -88,35 +89,39 @@
     }
 
     .footer {
-      margin: 80px 0 40px;
+      margin-top: 60px;
       font-size: 13px;
       opacity: 0.5;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- 배너 -->
-  <div class="wide">
-    <img 
-      src="KakaoTalk_20260206_095855285.jpg" 
-      alt="SBS게임아카데미학원 신년 배너"
+  <!-- 1️⃣ 히어로 영상 (맨 위 풀스크린) -->
+  <section class="section-full">
+    <div class="hero-video">
+      <video
+        src="curri_main_thum_dev.mp4"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+  </section>
+
+  <!-- 2️⃣ 풀와이드 배너 -->
+  <section class="section-full">
+    <img
+      src="KakaoTalk_20260206_095855285.jpg"
+      alt="SBS게임아카데미학원 신년 이벤트"
       class="banner"
     >
-  </div>
+  </section>
 
-  <!-- 영상 -->
-  <div class="video">
-    <video 
-      src="curri_main_thum_dev.mp4"
-      controls
-      playsinline
-      poster="KakaoTalk_20260206_095855285.jpg">
-    </video>
-  </div>
-
-  <!-- 텍스트 영역 -->
-  <div class="container">
+  <!-- 3️⃣ 텍스트 영역 -->
+  <section class="container">
     <div class="badge">SBS게임아카데미학원</div>
 
     <h1>
@@ -136,7 +141,7 @@
     <div class="footer">
       © SBS게임아카데미학원
     </div>
-  </div>
+  </section>
 
 </body>
 </html>
