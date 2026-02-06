@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -19,12 +17,11 @@
 
     /* ===== 풀화면 영상 ===== */
     .hero-video {
+      position: relative;
       width: 100vw;
       height: 100vh;
       background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
     }
 
     .hero-video video {
@@ -34,6 +31,37 @@
       background: #000;
     }
 
+    /* ===== 영상 위 문구 ===== */
+    .hero-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .hero-text-inner {
+      background: rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+      padding: 28px 32px;
+      border-radius: 18px;
+    }
+
+    .hero-text h1 {
+      margin: 0 0 14px;
+      font-size: 32px;
+      line-height: 1.4;
+    }
+
+    .hero-text p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
     /* ===== 풀폭 배너 ===== */
     .banner {
       width: 100vw;
@@ -41,7 +69,6 @@
 
     .banner img {
       width: 100%;
-      height: auto;
       display: block;
     }
 
@@ -93,7 +120,7 @@
       opacity: 0.5;
     }
 
-    /* ===== 고정 카카오 상담 버튼 ===== */
+    /* ===== 고정 카카오 버튼 ===== */
     .floating-kakao {
       position: fixed;
       right: 20px;
@@ -107,35 +134,41 @@
       font-weight: 700;
       text-decoration: none;
       display: flex;
-      align-items: center;
       gap: 8px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .floating-kakao:hover {
-      background: #16a34a;
-      transform: translateY(-3px);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 🎮 게임개발 커리큘럼 영상 -->
+  <!-- 🎮 영상 -->
   <section class="hero-video">
     <video autoplay muted loop playsinline>
       <source src="curri_main_thum_dev.mp4" type="video/mp4">
-      브라우저가 영상을 지원하지 않습니다.
     </video>
+
+    <!-- ✅ 영상 위 문구 (추가만 함) -->
+    <div class="hero-text">
+      <div class="hero-text-inner">
+        <h1>
+          게임 · 웹툰 · 웹소설<br>
+          실무 중심 멘토링
+        </h1>
+        <p>
+          취업 · 데뷔 · 1인 개발을 위한<br>
+          현업 실무자 기반 교육
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- 🎉 학원 신년 맞이 배너 -->
+  <!-- 🎉 배너 -->
   <section class="banner">
-    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
+    <img src="KakaoTalk_20260206_095855285.jpg">
   </section>
 
-  <!-- 📄 텍스트 / 상담 -->
+  <!-- 📄 기존 영역 (그대로) -->
   <div class="container">
     <div class="badge">SBS게임아카데미학원</div>
 
@@ -153,17 +186,11 @@
       지금 상담 신청하기
     </a>
 
-    <div class="footer">
-      © SBS게임아카데미학원
-    </div>
+    <div class="footer">© SBS게임아카데미학원</div>
   </div>
 
-  <!-- 💬 항상 떠있는 카카오 상담 -->
-  <a
-    href="https://open.kakao.com/o/sTHwo0ei"
-    class="floating-kakao"
-    target="_blank"
-  >
+  <!-- 💬 고정 상담 -->
+  <a href="https://open.kakao.com/o/sTHwo0ei" class="floating-kakao">
     💬 카카오 상담
   </a>
 
