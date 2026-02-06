@@ -11,17 +11,17 @@
       background: linear-gradient(180deg, #0f172a, #020617);
       color: #ffffff;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
     .container {
       max-width: 520px;
       margin: 0 auto;
     }
-    .logo {
-      width: 140px;
-      margin: 0 auto 24px;
-      display: block;
+    .banner {
+      width: 100%;
       border-radius: 16px;
+      margin-bottom: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
     .badge {
       display: inline-block;
@@ -30,7 +30,7 @@
       background: rgba(255,255,255,0.1);
       padding: 6px 14px;
       border-radius: 999px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       opacity: 0.9;
     }
     h1 {
@@ -38,10 +38,20 @@
       margin-bottom: 18px;
       line-height: 1.4;
     }
+    .video {
+      margin: 32px 0 36px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    }
+    video {
+      width: 100%;
+      display: block;
+    }
     p {
       font-size: 16px;
       opacity: 0.85;
-      margin-bottom: 44px;
+      margin-bottom: 36px;
       line-height: 1.7;
     }
     a.button {
@@ -69,8 +79,12 @@
 <body>
   <div class="container">
 
-    <!-- 이미지 -->
-    <img src="academy.jpg" alt="SBS게임아카데미학원" class="logo">
+    <!-- 학원 신년 맞이 배너 -->
+    <img 
+      src="KakaoTalk_20260206_095855285.jpg" 
+      alt="SBS게임아카데미학원 신년 배너"
+      class="banner"
+    >
 
     <div class="badge">SBS게임아카데미학원</div>
 
@@ -78,6 +92,16 @@
       게임 · 웹툰 · 웹소설<br>
       실무 중심 멘토링
     </h1>
+
+    <!-- 게임개발 커리큘럼 영상 -->
+    <div class="video">
+      <video 
+        src="curri_main_thum_dev.mp4"
+        controls
+        playsinline
+        poster="KakaoTalk_20260206_095855285.jpg">
+      </video>
+    </div>
 
     <p>
       취업, 데뷔, 1인 개발을 목표로 하는 분들을 위한<br>
