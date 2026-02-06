@@ -17,7 +17,7 @@
       color: #ffffff;
     }
 
-    /* ===== 영상 영역 ===== */
+    /* ===== 풀화면 영상 ===== */
     .hero-video {
       width: 100vw;
       height: 100vh;
@@ -30,11 +30,11 @@
     .hero-video video {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* ❗ 안 잘리게 */
+      object-fit: contain; /* 안 잘리게 */
       background: #000;
     }
 
-    /* ===== 배너 이미지 ===== */
+    /* ===== 풀폭 배너 ===== */
     .banner {
       width: 100vw;
     }
@@ -45,7 +45,7 @@
       display: block;
     }
 
-    /* ===== 콘텐츠 ===== */
+    /* ===== 텍스트 영역 ===== */
     .container {
       max-width: 520px;
       margin: 0 auto;
@@ -97,20 +97,20 @@
 
 <body>
 
-  <!-- 🔥 커리큘럼 영상 -->
+  <!-- 🎮 게임개발 커리큘럼 영상 -->
   <section class="hero-video">
     <video autoplay muted loop playsinline>
-      <source src="curri_main_thum_dev.mp4">
+      <source src="curri_main_thum_dev.mp4" type="video/mp4">
       브라우저가 영상을 지원하지 않습니다.
     </video>
   </section>
 
-  <!-- 🔥 신년 배너 -->
+  <!-- 🎉 학원 신년 맞이 배너 -->
   <section class="banner">
-    <img src="kakaotalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트">
+    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
   </section>
 
-  <!-- 텍스트 영역 -->
+  <!-- 📄 텍스트 / 상담 -->
   <div class="container">
     <div class="badge">SBS게임아카데미학원</div>
 
