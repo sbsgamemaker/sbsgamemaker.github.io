@@ -22,8 +22,9 @@
       width: 100vw;
       height: 100vh;
       background: #000;
-      position: relative; /* 문구 얹기용 */
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-video video {
@@ -31,28 +32,6 @@
       height: 100%;
       object-fit: contain;
       background: #000;
-    }
-
-    /* ===== 영상 위 문구 ===== */
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      padding: 0 20px;
-      z-index: 2;
-    }
-
-    .hero-text h1 {
-      font-size: 36px;
-      line-height: 1.4;
-      margin-bottom: 16px;
-    }
-
-    .hero-text p {
-      font-size: 18px;
-      opacity: 0.9;
     }
 
     /* ===== 풀폭 배너 ===== */
@@ -84,13 +63,13 @@
       margin-bottom: 24px;
     }
 
-    h2 {
+    h1 {
       font-size: 30px;
       margin-bottom: 18px;
       line-height: 1.4;
     }
 
-    p.desc {
+    p {
       font-size: 16px;
       opacity: 0.85;
       margin-bottom: 44px;
@@ -113,6 +92,31 @@
       font-size: 13px;
       opacity: 0.5;
     }
+
+    /* ===== 고정 카카오 상담 버튼 ===== */
+    .floating-kakao {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      background: #22c55e;
+      color: #052e16;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .floating-kakao:hover {
+      background: #16a34a;
+      transform: translateY(-3px);
+    }
   </style>
 </head>
 
@@ -124,18 +128,6 @@
       <source src="curri_main_thum_dev.mp4" type="video/mp4">
       브라우저가 영상을 지원하지 않습니다.
     </video>
-
-    <!-- ✨ 영상 위 문구 -->
-    <div class="hero-text">
-      <h1>
-        게임 개발의 시작<br>
-        실무에서 답을 찾다
-      </h1>
-      <p>
-        기획 · 아트 · 프로그래밍<br>
-        현업 기준 커리큘럼
-      </p>
-    </div>
   </section>
 
   <!-- 🎉 학원 신년 맞이 배너 -->
@@ -143,16 +135,16 @@
     <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
   </section>
 
-  <!-- 📄 상담 영역 -->
+  <!-- 📄 텍스트 / 상담 -->
   <div class="container">
     <div class="badge">SBS게임아카데미학원</div>
 
-    <h2>
+    <h1>
       게임 · 웹툰 · 웹소설<br>
       실무 중심 멘토링
-    </h2>
+    </h1>
 
-    <p class="desc">
+    <p>
       취업, 데뷔, 1인 개발을 목표로 하는 분들을 위한<br>
       현업 실무자 기반 맞춤 교육 과정
     </p>
@@ -165,6 +157,15 @@
       © SBS게임아카데미학원
     </div>
   </div>
+
+  <!-- 💬 항상 떠있는 카카오 상담 -->
+  <a
+    href="https://open.kakao.com/o/sTHwo0ei"
+    class="floating-kakao"
+    target="_blank"
+  >
+    💬 카카오 상담
+  </a>
 
 </body>
 </html>
