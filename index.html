@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -53,31 +55,14 @@
       opacity: 0.9;
     }
 
-    /* ===== 풀폭 배너 ===== */
+    /* ===== curri.png 풀스크린 배너 ===== */
     .banner {
       width: 100vw;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ✅ 과정 이미지 섹션 추가 */
-    .curriculum {
-      width: 100vw;
-      background: #020617;
-      padding: 80px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .curriculum img {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      display: block;
+      height: 100vh;
+      background-image: url("curri.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
     }
 
     /* ===== 텍스트 영역 ===== */
@@ -173,15 +158,8 @@
     </div>
   </section>
 
-  <!-- 🎉 학원 신년 맞이 배너 -->
-  <section class="banner">
-    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
-  </section>
-
-  <!-- ✅ 이런 과정들을 배운다 -->
-  <section class="curriculum">
-    <img src="curri.png" alt="SBS게임아카데미 교육 과정">
-  </section>
+  <!-- 🎉 curri.png 풀스크린 배너 -->
+  <section class="banner"></section>
 
   <!-- 📄 상담 영역 -->
   <div class="container">
