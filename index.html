@@ -68,7 +68,7 @@
       display: block;
     }
 
-    /* ===== 커리큘럼 이미지 (PC 기준) ===== */
+    /* ===== 커리큘럼 이미지 (PC 기준 유지) ===== */
     .curri-section {
       width: 100vw;
       height: 100vh;
@@ -157,7 +157,7 @@
     ========================= */
     @media (max-width: 768px) {
 
-      /* 영상 검은 공백 제거 */
+      /* 영상 여백 최적화 */
       .hero-video {
         height: 65svh;
       }
@@ -180,12 +180,13 @@
         padding: 0;
       }
 
-      /* 🔥 커리큘럼 상단 검은 공백 제거 핵심 */
+      /* 🔥 핵심 수정
+         배너 ↔ 커리큘럼 사이 검은 공백 제거 */
       .curri-section {
-        height: 60svh;
+        height: auto;
+        aspect-ratio: 16 / 9;
         background-size: contain;
         background-color: #020617;
-        margin-top: -1px;
       }
     }
   </style>
