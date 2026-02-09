@@ -17,7 +17,7 @@
       color: #ffffff;
     }
 
-    /* ===== 풀화면 영상 (PC 기준 유지) ===== */
+    /* ===== 풀화면 영상 (PC 유지) ===== */
     .hero-video {
       width: 100vw;
       height: 100vh;
@@ -29,7 +29,7 @@
     .hero-video video {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* PC 그대로 */
+      object-fit: contain;
       background: #000;
       display: block;
     }
@@ -56,7 +56,7 @@
       opacity: 0.9;
     }
 
-    /* ===== 풀폭 배너 ===== */
+    /* ===== 배너 ===== */
     .banner {
       width: 100vw;
       margin: 0;
@@ -123,7 +123,7 @@
       opacity: 0.5;
     }
 
-    /* ===== 페이지 맨 아래 학원 정보 ===== */
+    /* ===== 학원 정보 ===== */
     .footer-info {
       width: 100%;
       padding: 40px 20px;
@@ -152,26 +152,20 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
-    .floating-kakao:hover {
-      background: #16a34a;
-    }
-
     /* =========================
-       📱 모바일 전용 수정
-       (PC 절대 영향 없음)
+       📱 모바일 전용 (PC 무영향)
     ========================= */
     @media (max-width: 768px) {
 
-      /* 🔥 영상 검은 공백 제거 핵심 */
+      /* 영상 검은 공백 제거 */
       .hero-video {
         height: 65svh;
       }
 
       .hero-video video {
-        object-fit: cover; /* 모바일만 꽉 채움 */
+        object-fit: cover;
       }
 
-      /* 영상 텍스트 축소 */
       .hero-text h1 {
         font-size: 22px;
         line-height: 1.3;
@@ -181,17 +175,17 @@
         font-size: 14px;
       }
 
-      /* 영상 ↔ 배너 사이 검은 공백 제거 */
       section {
         margin: 0;
         padding: 0;
       }
 
-      /* 커리큘럼 이미지 안 잘리게 */
+      /* 🔥 커리큘럼 상단 검은 공백 제거 핵심 */
       .curri-section {
         height: 60svh;
         background-size: contain;
         background-color: #020617;
+        margin-top: -1px;
       }
     }
   </style>
@@ -199,40 +193,27 @@
 
 <body>
 
-  <!-- 🎮 게임개발 커리큘럼 영상 -->
   <section class="hero-video">
     <video autoplay muted loop playsinline>
       <source src="curri_main_thum_dev.mp4" type="video/mp4">
     </video>
 
     <div class="hero-text">
-      <h1>
-        게임 개발의 시작<br>
-        실무에서 답을 찾다
-      </h1>
-      <p>
-        기획 · 아트 · 프로그래밍<br>
-        현업 기준 커리큘럼
-      </p>
+      <h1>게임 개발의 시작<br>실무에서 답을 찾다</h1>
+      <p>기획 · 아트 · 프로그래밍<br>현업 기준 커리큘럼</p>
     </div>
   </section>
 
-  <!-- 🎉 신년 배너 -->
   <section class="banner">
-    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
+    <img src="KakaoTalk_20260206_095855285.jpg" alt="신년 이벤트 배너">
   </section>
 
-  <!-- 📌 커리큘럼 -->
   <section class="curri-section"></section>
 
-  <!-- 📄 상담 영역 -->
   <div class="container">
     <div class="badge">SBS게임아카데미학원</div>
 
-    <h2>
-      게임 · 웹툰 · 웹소설<br>
-      실무 중심 멘토링
-    </h2>
+    <h2>게임 · 웹툰 · 웹소설<br>실무 중심 멘토링</h2>
 
     <p class="desc">
       취업, 데뷔, 1인 개발을 목표로 하는 분들을 위한<br>
@@ -243,12 +224,9 @@
       지금 상담 신청하기
     </a>
 
-    <div class="footer">
-      © SBS게임아카데미학원
-    </div>
+    <div class="footer">© SBS게임아카데미학원</div>
   </div>
 
-  <!-- 🏫 학원 정보 -->
   <div class="footer-info">
     학원명 : SBS아카데미게임학원<br>
     지점 주소 : 서울 서대문구 신촌로 121 2층<br>
@@ -259,7 +237,6 @@
     학원등록번호 : 서울서부 제02201500136호
   </div>
 
-  <!-- 💬 카카오 상담 -->
   <a href="https://open.kakao.com/o/sTHwo0ei" class="floating-kakao" target="_blank">
     💬 카카오 상담
   </a>
