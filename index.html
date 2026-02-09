@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -28,19 +30,23 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      background: #000;
     }
 
+    /* ===== 영상 위 문구 ===== */
     .hero-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      padding: 0 20px;
       z-index: 2;
     }
 
     .hero-text h1 {
       font-size: 36px;
+      line-height: 1.4;
       margin-bottom: 16px;
     }
 
@@ -49,30 +55,53 @@
       opacity: 0.9;
     }
 
-    /* ===== 신년 맞이 배너 (기존 유지) ===== */
+    /* ===== 풀폭 배너 ===== */
     .banner {
       width: 100vw;
     }
 
     .banner img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
-    /* ===== curri.png 풀스크린 ===== */
-    .curri-full {
+    /* ===== 커리큘럼 이미지 풀배경 ===== */
+    .curri-section {
       width: 100vw;
       height: 100vh;
-      background: url("curri.png") no-repeat center center;
-      background-size: cover;
+      background: url('curri.png') center center / cover no-repeat;
     }
 
-    /* ===== 상담 영역 ===== */
+    /* ===== 텍스트 영역 ===== */
     .container {
       max-width: 520px;
       margin: 0 auto;
       text-align: center;
       padding: 80px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      background: rgba(255,255,255,0.1);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+
+    p.desc {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-bottom: 44px;
+      line-height: 1.7;
     }
 
     a.button {
@@ -83,53 +112,93 @@
       border-radius: 12px;
       font-weight: 700;
       text-decoration: none;
+      font-size: 18px;
     }
 
-    /* ===== 카카오 버튼 ===== */
+    .footer {
+      margin-top: 60px;
+      font-size: 13px;
+      opacity: 0.5;
+    }
+
+    /* ===== 오른쪽 아래 고정 카카오 상담 버튼 ===== */
     .floating-kakao {
       position: fixed;
       right: 20px;
       bottom: 20px;
+      z-index: 9999;
       background: #22c55e;
+      color: #052e16;
       padding: 14px 18px;
       border-radius: 999px;
+      font-size: 15px;
       font-weight: 700;
-      z-index: 9999;
       text-decoration: none;
-      color: #052e16;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .floating-kakao:hover {
+      background: #16a34a;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 영상 -->
+  <!-- 🎮 게임개발 커리큘럼 영상 -->
   <section class="hero-video">
     <video autoplay muted loop playsinline>
       <source src="curri_main_thum_dev.mp4" type="video/mp4">
     </video>
+
     <div class="hero-text">
-      <h1>게임 개발의 시작<br>실무에서 답을 찾다</h1>
-      <p>기획 · 아트 · 프로그래밍<br>현업 기준 커리큘럼</p>
+      <h1>
+        게임 개발의 시작<br>
+        실무에서 답을 찾다
+      </h1>
+      <p>
+        기획 · 아트 · 프로그래밍<br>
+        현업 기준 커리큘럼
+      </p>
     </div>
   </section>
 
-  <!-- 신년 맞이 배너 (절대 안 건드림) -->
+  <!-- 🎉 학원 신년 맞이 배너 -->
   <section class="banner">
-    <img src="KakaoTalk_20260206_095855285.jpg">
+    <img src="KakaoTalk_20260206_095855285.jpg" alt="SBS게임아카데미학원 신년 이벤트 배너">
   </section>
 
-  <!-- curri.png 풀스크린 추가 -->
-  <section class="curri-full"></section>
+  <!-- 📌 이런 과정들을 배운다 -->
+  <section class="curri-section"></section>
 
-  <!-- 상담 -->
+  <!-- 📄 상담 영역 -->
   <div class="container">
+    <div class="badge">SBS게임아카데미학원</div>
+
+    <h2>
+      게임 · 웹툰 · 웹소설<br>
+      실무 중심 멘토링
+    </h2>
+
+    <p class="desc">
+      취업, 데뷔, 1인 개발을 목표로 하는 분들을 위한<br>
+      현업 실무자 기반 맞춤 교육 과정
+    </p>
+
     <a class="button" href="https://open.kakao.com/o/sTHwo0ei">
       지금 상담 신청하기
     </a>
+
+    <div class="footer">
+      © SBS게임아카데미학원
+    </div>
   </div>
 
-  <a href="https://open.kakao.com/o/sTHwo0ei" class="floating-kakao">
+  <!-- 💬 고정 카카오 상담 버튼 -->
+  <a href="https://open.kakao.com/o/sTHwo0ei" class="floating-kakao" target="_blank">
     💬 카카오 상담
   </a>
 
